@@ -1,11 +1,1 @@
-@use "sass/resets";
-@use "sass/fonts";
-@use "sass/colors";
-
-:root {
-  font-size: fonts.$size;
-  font-family: fonts.$family;
-
-  color: colors.$text;
-  background-color: colors.$background;
-}
+@use "sass";

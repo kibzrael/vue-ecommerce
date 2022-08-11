@@ -1,0 +1,39 @@
+@use "fonts" as *;
+@use "colors";
+
+.title {
+  font-weight: $bold;
+  font-size: map-get($sizes, "xxl");
+}
+
+.subtitle {
+  color: colors.$subtitle;
+}
+
+.faded {
+  color: colors.$faded;
+}
+
+@each $name, $size in $sizes {
+  .#{$name} {
+    font-size: $size;
+  }
+}
+
+.bold {
+  font-weight: $bold;
+}
+
+.primary {
+  color: colors.$primary;
+  @include colors.recolor(colors.$primary);
+}
+
+a {
+  color: colors.$subtitle;
+  transition: all 300ms;
+
+  &:hover {
+    color: colors.$text;
+  }
+}

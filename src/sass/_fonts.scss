@@ -5,4 +5,12 @@ $bold: 400;
 
 $family: "Kumbh Sans", sans-serif;
 
-$size: 16px;
+$base-size: 16px;
+
+$sizes: (
+  sm: 0.75rem,
+  md: 1rem,
+  lg: 1.25rem,
+  xl: 1.5rem,
+  xxl: clamp(2.5rem, 3.5vw, 3.5rem),
+);

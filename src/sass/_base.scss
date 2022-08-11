@@ -1,0 +1,29 @@
+@use "fonts";
+@use "colors";
+
+:root {
+  font-size: fonts.$base-size;
+  font-family: fonts.$family;
+  font-weight: fonts.$regular;
+}
+
+body {
+  color: colors.$text;
+  background-color: colors.$background;
+}
+
+#app {
+  margin-inline: clamp(1rem, 12%, 10rem);
+}
+
+@media (max-width: 80em) {
+  #app {
+    padding-inline: clamp(1rem, 8%, 9.6rem);
+  }
+}
+
+@media (max-width: 50em) {
+  #app {
+    padding-inline: clamp(1rem, 5%, 5rem);
+  }
+}

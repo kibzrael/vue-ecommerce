@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+}
+
+article,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+
+  * {
+    max-width: 100%;
+  }
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+}

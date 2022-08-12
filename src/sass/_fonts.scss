@@ -1,16 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 $regular: 400;
-$bold: 400;
+$bold: 700;
 
 $family: "Kumbh Sans", sans-serif;
 
 $base-size: 16px;
 
 $sizes: (
+  xs: 0.615rem,
   sm: 0.75rem,
   md: 1rem,
-  lg: 1.25rem,
+  lg: 1.125rem,
   xl: 1.5rem,
-  xxl: clamp(2.5rem, 3.5vw, 3.5rem),
+  xxl: clamp(2rem, 3vw, 3rem),
 );

@@ -29,6 +29,10 @@
   @include colors.recolor(colors.$primary);
 }
 
+.strike {
+  text-decoration: line-through;
+}
+
 a {
   color: colors.$subtitle;
   transition: all 300ms;
@@ -36,4 +40,21 @@ a {
   &:hover {
     color: colors.$text;
   }
+}
+
+p {
+  max-width: 50ch;
+}
+
+span {
+  vertical-align: middle;
+}
+
+.label {
+  color: colors.$primary;
+  background-color: colors.$label;
+  padding: 0.0875rem 0.325rem;
+  border-radius: 5px;
+  font-weight: $bold;
+  margin-inline: 1rem;
 }

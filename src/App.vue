@@ -1,7 +1,9 @@
-<script setup></script>
-
 <template>
-  <h1>Ecommerce App</h1>
+  <Topbar />
+  <Product />
 </template>
 
-<style></style>
+<script setup>
+import Topbar from "./components/Topbar.vue";
+import Product from "./components/Product.vue";
+</script>

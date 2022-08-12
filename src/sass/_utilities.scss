@@ -3,16 +3,57 @@
 
 @mixin row($gap) {
   display: flex;
+  align-items: center;
   gap: $gap;
 }
 
 .button {
   background-color: colors.$primary;
-  background-color: map-get($map: fonts.$sizes, $key: "sm");
+  font-weight: fonts.$bold;
+  color: white;
   border-radius: 0.75rem;
   transition: all 300ms;
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  cursor: pointer;
+
+  .icon {
+    @include colors.recolor(white);
+    max-width: 20px;
+    height: 20px;
+  }
 
   &:hover {
-    background-color: lighten(colors.$primary, colors.$opacity);
+    background-color: lighten(colors.$primary, 15%);
   }
+}
+
+.collapsing-col {
+  @include row(0);
+}
+
+.even-cols {
+  @include row(0);
+
+  * {
+    flex: 1;
+  }
+}
+
+@media (max-width: 50rem) {
+  .collapsing-col {
+    flex-direction: column;
+  }
+
+  .even-cols {
+    flex-direction: column;
+  }
+}
+
+.card {
+  background-color: colors.$card;
+  border-radius: 0.75rem;
 }

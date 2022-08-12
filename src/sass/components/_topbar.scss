@@ -1,0 +1,87 @@
+@use "../utilities" as *;
+@use "../colors";
+@use "../fonts";
+
+.topbar {
+  @include row(0);
+  gap: 2.5rem;
+  padding-block: 1.5rem;
+  border-bottom: 2px solid colors.$card;
+
+  .menu {
+    display: none;
+  }
+
+  @media (max-width: 50rem) {
+    gap: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-bottom: none;
+
+    .menu {
+      display: inline-flex;
+    }
+
+    .spacer {
+      flex-grow: 1;
+    }
+  }
+
+  nav {
+    flex-grow: 1;
+    margin-left: 2rem;
+
+    ul {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 50rem) {
+      display: none;
+    }
+  }
+
+  .cart {
+    position: relative;
+
+    .cart-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin: 0.125rem 0.25rem;
+    }
+
+    .counter {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: colors.$primary;
+      color: white;
+      font-size: map-get(fonts.$sizes, "xs");
+      font-weight: fonts.$bold;
+      padding: 2px 8px;
+      border-radius: 100vmax;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover .cart-icon {
+      @include colors.recolor(colors.$text);
+    }
+  }
+
+  .avatar {
+    width: 3.5rem;
+    border-radius: 100vmax;
+    border: 2px transparent solid;
+    transition: 300ms;
+
+    @media (max-width: 50rem) {
+      width: 2.5rem;
+    }
+
+    &:hover {
+      border: 2px colors.$primary solid;
+    }
+  }
+}

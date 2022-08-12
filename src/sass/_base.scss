@@ -18,12 +18,12 @@ body {
 
 @media (max-width: 80em) {
   #app {
-    padding-inline: clamp(1rem, 8%, 9.6rem);
+    margin-inline: clamp(1rem, 8%, 9.6rem);
   }
 }
 
 @media (max-width: 50em) {
   #app {
-    padding-inline: clamp(1rem, 5%, 5rem);
+    margin-inline: 0;
   }
 }

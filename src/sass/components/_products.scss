@@ -9,6 +9,15 @@
     margin-inline: 3rem;
   }
 
+  @media (max-width: 70rem) {
+    gap: 2rem;
+    margin-block: 3rem;
+
+    & > * {
+      margin-inline: 0;
+    }
+  }
+
   @media (max-width: 50rem) {
     gap: 1.5rem;
     margin: 0;

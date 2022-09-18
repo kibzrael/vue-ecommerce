@@ -7,6 +7,13 @@
   gap: $gap;
 }
 
+@mixin column($gap) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $gap;
+}
+
 .button {
   background-color: colors.$primary;
   font-weight: fonts.$bold;

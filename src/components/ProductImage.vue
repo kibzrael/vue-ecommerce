@@ -1,6 +1,6 @@
 <template>
   <div class="images">
-    <img class="cover" src="/image-product-1.jpg" alt="Product Image" />
+    <img class="cover" :src="`/image-product-${imageIndex}.jpg`" alt="Product Image" @click="viewImage=true" />
     <div class="thumbnails">
       <img
         class="thumbnail active"
@@ -8,8 +8,17 @@
         :key="'image' + index"
         :src="`/image-product-${index}-thumbnail.jpg`"
         :alt="`Image ${index}`"
+        @click="imageIndex=index"
       />
     </div>
   </div>
+  <ImageView :initial="imageIndex" v-model="viewImage" v-if="viewImage"/>
 </template>
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+import ImageView from './ImageView.vue';
+
+let viewImage = ref(false)
+let imageIndex = ref(1)
+
+</script>

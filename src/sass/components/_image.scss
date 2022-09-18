@@ -1,0 +1,75 @@
+@use "../utilities" as *;
+@use "../colors";
+
+.image-view {
+  position: fixed;
+  z-index: 5;
+  @include column(1rem);
+  top: 50%;
+  left: 50%;
+  width: fit-content;
+  transform: translate(-50%, -50%);
+
+    @media (max-width:50rem) {
+        display: none;
+    }
+
+  .close {
+    align-self: flex-end;
+    cursor: pointer;
+    @include colors.recolor(white);
+  }
+
+  .image-carousel{
+    position: relative;
+
+    .image {
+        margin: 1rem 0;
+        max-height: 60vh;
+        border-radius: 1rem;
+      }
+
+      .next, .previous{
+        position: absolute;
+        background-color: white;
+        padding: 0.75rem;
+        border-radius: 100vmax;
+        height: 1.25rem;
+        width: 1.25rem;
+        object-fit: contain;
+        top: 50%;
+        cursor: pointer;
+      }
+
+      .next{
+        right: 0;
+        transform: translate(50%,-50%);
+      }
+
+      .previous{
+        left: 0;
+        transform: translate(-50%,-50%);
+      }
+
+  } 
+
+  .thumbnails {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    .thumbnail {
+      width: 5rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+  }
+
+  &::before {
+    position: fixed;
+    z-index: -1;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.75);
+    inset: -100rem;
+  }
+}

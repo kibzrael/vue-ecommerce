@@ -27,7 +27,7 @@
 
     function selectImage(index){
         console.log(index);
-        let selectedIndex= index<1?4:index>4?1:index;
+        let selectedIndex= index<1 ? 4 : index>4 ? 1 : index;
         currentImage.value= `/image-product-${selectedIndex}.jpg`;
         currentIndex.value=selectedIndex;
     }

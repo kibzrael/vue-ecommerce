@@ -4,10 +4,12 @@
 .title {
   font-weight: $bold;
   font-size: map-get($sizes, "xxl");
+  line-height: 1.2;
 }
 
 .subtitle {
   color: colors.$subtitle;
+  line-height: 1.5;
 }
 
 .faded {

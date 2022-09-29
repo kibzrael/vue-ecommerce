@@ -40,7 +40,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [HERE](https://www.frontendmentor.io/solutions/vue-ecommerce-app-ukKt6NrlUv)
 - Live Site URL: [HERE](https://ecommerce.raelcode.tech)
 
 ## My process

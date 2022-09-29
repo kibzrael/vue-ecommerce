@@ -8,18 +8,12 @@
     />
     <div class="image-carousel">
       <img class="image" :src="currentImage" alt="Current Image" />
-      <img
-        class="previous"
-        src="/icon-previous.svg"
-        alt="Previous Image"
-        @click="selectImage(currentIndex - 1)"
-      />
-      <img
-        class="next"
-        src="/icon-next.svg"
-        alt="Next Image"
-        @click="selectImage(currentIndex + 1)"
-      />
+      <div class="previous" @click="selectImage(currentIndex - 1)">
+        <img src="/icon-previous.svg" alt="Previous Image" />
+      </div>
+      <div class="next" @click="selectImage(currentIndex + 1)">
+        <img src="/icon-next.svg" alt="Next Image" />
+      </div>
     </div>
     <div class="thumbnails">
       <img

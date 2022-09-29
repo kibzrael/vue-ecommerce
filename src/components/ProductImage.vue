@@ -7,18 +7,12 @@
         alt="Product Image"
         @click="viewImage = true"
       />
-      <img
-        class="previous"
-        src="/icon-previous.svg"
-        alt="Previous Image"
-        @click="selectImage(imageIndex - 1)"
-      />
-      <img
-        class="next"
-        src="/icon-next.svg"
-        alt="Next Image"
-        @click="selectImage(imageIndex + 1)"
-      />
+      <div class="previous" @click="selectImage(imageIndex - 1)">
+        <img src="/icon-previous.svg" alt="Previous Image" />
+      </div>
+      <div class="next" @click="selectImage(imageIndex + 1)">
+        <img src="/icon-next.svg" alt="Next Image" />
+      </div>
     </div>
     <div class="thumbnails">
       <img

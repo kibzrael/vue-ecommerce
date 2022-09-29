@@ -1,5 +1,6 @@
 @use "../colors";
 @use "../fonts";
+@use "../utilities" as *;
 
 .product {
   gap: 3rem;
@@ -32,6 +33,38 @@
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+
+    .image-carousel {
+      position: relative;
+
+      .next,
+      .previous {
+        position: absolute;
+        display: none;
+        background-color: white;
+        padding: 0.75rem;
+        border-radius: 100vmax;
+        height: 1.25rem;
+        width: 1.25rem;
+        object-fit: contain;
+        top: 50%;
+        cursor: pointer;
+
+        @media (max-width: 50em) {
+          display: inline;
+        }
+      }
+
+      .next {
+        right: 1rem;
+        transform: translate(0, -50%);
+      }
+
+      .previous {
+        left: 1rem;
+        transform: translate(0, -50%);
+      }
+    }
 
     .cover {
       border-radius: 1rem;
@@ -100,7 +133,7 @@
         margin-block: 3px;
         transition: 300ms;
 
-        &:first-child{
+        &:first-child {
           padding: 10px 0;
         }
 

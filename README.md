@@ -41,7 +41,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [HERE](https://www.frontendmentor.io/solutions/vue-ecommerce-app-ukKt6NrlUv)
-- Live Site URL: [HERE](https://ecommerce.raelcode.tech)
+- Live Site URL: [HERE](https://ecommerce.raelcode.com)
 
 ## My process
 
